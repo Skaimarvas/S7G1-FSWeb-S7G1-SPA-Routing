@@ -72,6 +72,6 @@ body {
 }
 
 .link-no-underline {
-  text-decoration: none; /* Altı çiziliyi kaldır */
-  color: inherit; /* Link rengini miras al */
+  text-decoration: none;
+  color: inherit;
 }

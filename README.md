@@ -58,11 +58,11 @@ Eğer Görev 1 ve 2'yi tamamladıktan sonra bu göreve geçebilirsin.
 
 #### `Film Kaydet` işlevini ekleyin
 
-- [ ] Halihazırda kullanmadığımız bir `Kaydedilenler Listesi` bileşenimizin olduğunu fark etmişsindir. Bu adımda bir film kaydetmek için bir işlevsellik ekleyeceksin. `Film` bileşenine `KaydedilenlerListesineEkle` fonksiyonunu gönderin. Daha sonra `Kaydet` butonuna bir click handler ekleyin. `Film.js` içindeki 24-27 satır arasındaki kodun başındaki yorum etiketini kaldırman gerekmektedir.
+- [x] Halihazırda kullanmadığımız bir `Kaydedilenler Listesi` bileşenimizin olduğunu fark etmişsindir. Bu adımda bir film kaydetmek için bir işlevsellik ekleyeceksin. `Film` bileşenine `KaydedilenlerListesineEkle` fonksiyonunu gönderin. Daha sonra `Kaydet` butonuna bir click handler ekleyin. `Film.js` içindeki 24-27 satır arasındaki kodun başındaki yorum etiketini kaldırman gerekmektedir.
 
 #### Kaydedilen Film listesini `Link` e çevirin
 
-- [ ] Kaydedilen filmler, filmin kendisine linklenmelidir. `filmiKaydet` fonksiyonunun ne işe yaradığını düşünün.
+- [x] Kaydedilen filmler, filmin kendisine linklenmelidir. `filmiKaydet` fonksiyonunun ne işe yaradığını düşünün.
 
 #### Kaydedilen Film `Link` lerini `NavLink`e dönüştürün
 

@@ -1,5 +1,5 @@
-import React from 'react';
+import React, { Children } from "react";
 
-export default function FilmCard (props) {
-  return;
+export default function FilmCard(props) {
+  return <div></div>;
 }
