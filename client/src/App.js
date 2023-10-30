@@ -25,20 +25,15 @@ export default function App() {
     };
     FilmleriAl();
   }, []);
-
+  const kaydedilenler = [];
   const KaydedilenlerListesineEkle = (id) => {
     // Burası esnek. Aynı filmin birden fazla kez "saved" e eklenmesini engelleyin
+    setSaved();
   };
 
   return (
     <div>
-      <KaydedilenlerListesi
-        list={
-          [
-            /* Burası esnek */
-          ]
-        }
-      />
+      <KaydedilenlerListesi list={saved} />
 
       <Switch>
         <Route path="/" exact>
@@ -47,6 +42,7 @@ export default function App() {
         <Route path="/filmler/:productId" exact>
           <Film />
         </Route>
+        <Route path="/kaydedilenler/" exact></Route>
       </Switch>
     </div>
   );

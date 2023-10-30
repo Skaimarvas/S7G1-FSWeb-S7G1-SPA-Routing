@@ -52,7 +52,9 @@ export default function Film(props) {
           </div>
         ))}
       </div>
-      <div className="save-button">Kaydet</div>
+      <div className="save-button" onClick={(event) => event.target.id}>
+        Kaydet
+      </div>
     </div>
   );
 }
