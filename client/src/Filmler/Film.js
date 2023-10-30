@@ -5,29 +5,24 @@ import { useParams } from "react-router-dom";
 export default function Film(props) {
   const [movie, setMovie] = useState(null);
   let id = 1;
-  // URL'den alınan :id parametresini bu değişkene aktarın
   const { productId } = useParams();
   id = productId;
   console.log("Product ID:", productId);
   useEffect(() => {
     axios
-      .get(`http://localhost:5001/api/filmler/${id}`) // Bu uç noktayı Postman'le çalışın
+      .get(`http://localhost:5001/api/filmler/${id}`)
       .then((response) => {
-        // Bu kısmı log statementlarıyla çalışın
-        // ve burdan gelen response'u 'movie' e aktarın
         console.log("Film Bölümü:", response.data);
         setMovie(response.data);
       })
       .catch((error) => {
         console.error(error);
       });
-    // Bu effect her `id ` değiştiğinde çalışmalı
-    // Bunu nasıl gerçekleştirebiliriz?
-  }, [productId]);
+  }, [id]);
 
-  // Yalnızca esnek görevlere geçtiğinizde burdaki yorum etiketini kaldırın
-  // const filmiKaydet = evt => { }
-
+  const handleSave = () => {
+    props.function(productId, title);
+  };
   if (!movie) {
     return <div>Film bilgisi yükleniyor...</div>;
   }
@@ -52,7 +47,8 @@ export default function Film(props) {
           </div>
         ))}
       </div>
-      <div className="save-button" onClick={(event) => event.target.id}>
+
+      <div className="save-button" onClick={handleSave}>
         Kaydet
       </div>
     </div>
