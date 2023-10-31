@@ -27,11 +27,11 @@ export default function App() {
   }, []);
 
   const KaydedilenlerListesineEkle = (id, title) => {
-    const existingMovie = saved.find((movie) => movie.id === id);
+    const varolanfilm = saved.find((movie) => movie.id === id);
 
-    if (existingMovie) {
-      const updatedSavedList = saved.filter((movie) => movie.id !== id);
-      setSaved(updatedSavedList);
+    if (varolanfilm) {
+      const guncellist = saved.filter((movie) => movie.id !== id);
+      setSaved(guncellist);
     } else {
       setSaved([...saved, { id, title }]);
     }
